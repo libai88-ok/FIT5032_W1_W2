@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using FIT5032_MyCodeSnippet.Models;
+using FIT5032_MyCodeSnippet.Models.Exercise;
 namespace FIT5032_MyCodeSnippet.Controllers
 {
     public class HomeController : Controller
@@ -18,7 +19,8 @@ namespace FIT5032_MyCodeSnippet.Controllers
             Hello hello = new Hello();
             // I assigned the ViewBag.Message to the result
             ViewBag.Message = hello.GetHello();
-
+            ExampleDictionary ed = new ExampleDictionary();
+            ed.Example();
             return View();
         }
 
